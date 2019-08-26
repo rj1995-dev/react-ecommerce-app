@@ -37,23 +37,11 @@ export class App extends Component {
           <Route path="/products/:id" exact component={SingleProduct} />
           <Route path="/cart" exact component={Cart} />
           <Route component={Default} />
-          <Home />
-          <Cart />
-          <Contact />
-          <SingleProduct />
-          <Default />
-          <Products />
-          <About />
         </Switch>
         <Footer />
       </>
     );
   }
 }
-// const color = "red";
-// const Button = styled.button`
-//   color: white;
-//   font-size: ${props => (props.large ? "3rem" : "1rem")};
-//   background: ${color};
-// `;
+
 export default App;
