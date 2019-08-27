@@ -21,6 +21,7 @@ const HeroWrapper = styled.div`
   color: var(--mainWhite);
   background: linear-gradient(var(--primaryRGBA), var(--primaryRGBA)),
     url(${props => props.img}) center/cover no-repeat;
+
   .title {
     padding-top: 2rem;
     font-size: 3rem;
@@ -28,6 +29,10 @@ const HeroWrapper = styled.div`
     text-transform: uppercase;
     letter-spacing: var(--mainSpacing);
   }
+
+  /* @media screen and (min-width: 360px) {
+    
+  } */
 `;
 Hero.defaultProps = {
   img: mainBcg

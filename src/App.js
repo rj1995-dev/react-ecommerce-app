@@ -12,7 +12,7 @@ import Cart from "./pages/CartPage";
 import Products from "./pages/ProductsPage";
 import Contact from "./pages/ContactPage";
 import SingleProduct from "./pages/SingleProductPage";
-import Default from "./pages/Default";
+import Default from "./pages/Default.js";
 
 /*   Import Components  */
 import Navbar from "./components/Navbar";
