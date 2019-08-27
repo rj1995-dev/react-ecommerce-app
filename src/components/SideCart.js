@@ -6,6 +6,7 @@ export default function SideCart() {
     <ProductConsumer>
       {value => {
         const { cartOpen, closeCart, cart } = value;
+
         return (
           <CartWrapper show={cartOpen} onClick={closeCart}>
             <p>cart items</p>

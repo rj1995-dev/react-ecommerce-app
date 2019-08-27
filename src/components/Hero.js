@@ -33,6 +33,16 @@ const HeroWrapper = styled.div`
   /* @media screen and (min-width: 360px) {
     
   } */
+  /* @media only screen and (min-width: 768px) {
+    width: 100%;
+  
+  } */
+
+  /* Medium Devices, Desktops
+  @media only screen and (min-width: 992px) {
+    width: 50%;
+    /* background-color: pink; */
+  /* } */
 `;
 Hero.defaultProps = {
   img: mainBcg

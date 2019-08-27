@@ -30,6 +30,7 @@ const NavWrapper = styled.nav`
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 1;
   padding: 1rem 1.5rem;
   background: var(--mainGrey);
   border-bottom: 2.5px solid var(--primaryColor);
