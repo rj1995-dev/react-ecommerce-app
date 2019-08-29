@@ -21,7 +21,7 @@ export default class Services extends Component {
       {
         id: 3,
         icon: <FaRupeeSign />,
-        title: "sceure payment",
+        title: "secure payment",
         text:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit.Consequuntur, cum."
       },
