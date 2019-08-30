@@ -27,7 +27,7 @@ export default function Contact() {
                 type="email"
                 name="email"
                 className="form-control"
-                placeholder="eamil@email.com"
+                placeholder="email@email.com"
                 required
               />
             </div>
@@ -47,7 +47,7 @@ export default function Contact() {
                 name="message"
                 className="form-control"
                 rows="10"
-                placeholder="write something"
+                placeholder="write something..."
                 required
               />
             </div>
