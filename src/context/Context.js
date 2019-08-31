@@ -156,6 +156,74 @@ class ProductProvider extends Component {
   openCart = () => {
     this.setState({ cartOpen: true });
   };
+  //cart functionality
+  //increment
+  increment = id => {
+    let tempCart = [...this.state.cart];
+    const cartItem = tempCart.find(item => item.id === id);
+    cartItem.count++;
+    cartItem.total = cartItem.count * cartItem.price;
+    //  cartItem.total=parseFloat(cartItem.total.toFixed(2));
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart]
+        };
+      },
+      () => {
+        this.addTotals();
+        this.syncStorage();
+      }
+    );
+  };
+  //Decrement
+  decrement = id => {
+    let tempCart = [...this.state.cart];
+    const cartItem = tempCart.find(item => item.id === id);
+    cartItem.count = cartItem.count - 1;
+    if (cartItem.count === 0) {
+      this.removeItem(id);
+    } else {
+      cartItem.total = cartItem.count * cartItem.price;
+      this.setState(
+        () => {
+          return {
+            cart: [...tempCart]
+          };
+        },
+        () => {
+          this.addTotals();
+          this.syncStorage();
+        }
+      );
+    }
+  };
+  //remove item
+  removeItem = id => {
+    let tempCart = [...this.state.cart];
+    tempCart = tempCart.filter(item => item.id !== id);
+    this.setState(
+      {
+        cart: [...tempCart]
+      },
+      () => {
+        this.addTotals();
+        this.syncStorage();
+      }
+    );
+  };
+  //clear cart
+  clearCart = () => {
+    this.setState(
+      {
+        cart: []
+      },
+      () => {
+        this.addTotals();
+        this.syncStorage();
+      }
+    );
+  };
   render() {
     return (
       <ProductContext.Provider
@@ -166,7 +234,11 @@ class ProductProvider extends Component {
           closeCart: this.closeCart,
           openCart: this.openCart,
           addToCart: this.addToCart,
-          setSingleProduct: this.setSingleProduct
+          setSingleProduct: this.setSingleProduct,
+          increment: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart
         }}
       >
         {this.props.children}
