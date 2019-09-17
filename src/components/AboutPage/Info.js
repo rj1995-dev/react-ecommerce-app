@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../Title";
 import aboutBcg from "../../images/aboutBcg.jpeg";
+
 export default function Info() {
   return (
     <section className="py-5">
@@ -26,13 +27,15 @@ export default function Info() {
               obcaecati rem facere vel consequatur tempore similique eum
               incidunt cupiditate dicta?
             </p>
-            <button
+            <a
+              href="https://github-finder-apps.netlify.com/user/rj1995-dev"
               className="main-link"
-              type="button"
               style={{ marginTop: "2rem" }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               more details
-            </button>
+            </a>
           </div>
         </div>
       </div>

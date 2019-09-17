@@ -15,8 +15,10 @@ export default function ProductsFilter() {
           handleChange,
           storeProducts
         } = value;
+
         let companies = new Set();
         companies.add("all");
+
         for (let product in storeProducts) {
           companies.add(storeProducts[product]["company"]);
         }

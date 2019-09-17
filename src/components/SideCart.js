@@ -15,10 +15,10 @@ export default function SideCart() {
                 return (
                   <li key={item.id} className="cart-item mb-4">
                     <img
-                      src={`../${item.image}`}
+                      // src={`../${item.image}`}---- furthur use of contentful
                       alt="cart item"
                       width="35"
-                      //src={image}-- furthur use of contentful
+                      src={item.image}
                     />
                     <div className="mt-3">
                       <h6 className="text-capitalize">{item.title}</h6>
@@ -30,9 +30,9 @@ export default function SideCart() {
                 );
               })}
             </ul>
-            <h4 className="text-capitalize text-main">
+            <h5 className="text-capitalize text-main">
               cart total : ₹{cartTotal}
-            </h4>
+            </h5>
             <div className="text-center my-5">
               <Link to="/cart" className="main-link">
                 cart page
@@ -57,7 +57,7 @@ const CartWrapper = styled.div`
   transition: var(--mainTransition);
   transform: ${props => (props.show ? "translateX(0)" : "translateX(100%)")};
   @media (min-width: 360px) {
-    width: 20rem;
+    width: 17rem;
   }
   overflow: scroll;
   padding: 2rem;
