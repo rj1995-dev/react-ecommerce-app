@@ -16,7 +16,12 @@ export default function CartItem({
     <div className="row mt-5 mt-lg-0 text-capitalize text-center align-items-center">
       {/* image */}
       <div className="col-10 mx-auto col-lg-2 pb-2">
-        <img src={image} width="60" alt="product" className="img-fluid" />
+        <img
+          src={`../${image}`}
+          width="60"
+          alt="product"
+          className="img-fluid"
+        />
       </div>
       {/* end of image */}
       {/* title */}

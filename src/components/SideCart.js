@@ -15,10 +15,10 @@ export default function SideCart() {
                 return (
                   <li key={item.id} className="cart-item mb-4">
                     <img
-                      // src={`../${item.image}`}---- furthur use of contentful
+                      src={`../${item.image}`}
                       alt="cart item"
                       width="35"
-                      src={item.image}
+                      // src={item.image}---- furthur use of contentful
                     />
                     <div className="mt-3">
                       <h6 className="text-capitalize">{item.title}</h6>
